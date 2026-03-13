@@ -7,6 +7,8 @@ A modern, responsive single-page web application presenting strategic scenario p
 - **Dark Space Theme**: Deep blues, blacks, and glowing accents for an immersive experience
 - **Smooth Animations**: Powered by Framer Motion for elegant transitions
 - **Interactive Scenario Matrix**: Visual 2x2 grid for exploring alternative futures
+- **Dynamic Routing**: Navigate between overview and detailed scenario pages
+- **Detailed Scenario Pages**: In-depth exploration of each future scenario with stats and insights
 - **Responsive Design**: Optimized for all devices with Tailwind CSS
 - **Rich Content**: Comprehensive analysis of trends, scenarios, and strategic implications
 
@@ -62,7 +64,9 @@ npm run preview
 ├── postcss.config.js   # PostCSS configuration
 └── src/
     ├── main.jsx        # React entry point
-    ├── App.jsx         # Main application component
+    ├── App.jsx         # Router configuration
+    ├── HomePage.jsx    # Main overview page with all scenarios
+    ├── NewFrontier.jsx # Detailed "New Frontier" scenario page
     └── index.css       # Global styles and Tailwind imports
 ```
 
@@ -87,6 +91,7 @@ npm run preview
 - **Tailwind CSS**: Utility-first CSS framework
 - **Framer Motion**: Animation library
 - **Lucide React**: Beautiful icon set
+- **React Router DOM**: Client-side routing
 
 ## 🌟 Credits
 

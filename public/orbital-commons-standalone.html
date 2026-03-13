@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Commons - Space Industry 2040</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #e2e8f0;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    
+    .star {
+      animation: twinkle 3s infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen">
+  <!-- Starfield Background -->
+  <div class="fixed inset-0 z-0">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-blue-950/10 to-slate-950"></div>
+    <div id="stars"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <!-- Back Button -->
+    <div class="px-4 py-8">
+      <div class="max-w-7xl mx-auto">
+        <a href="/" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          <span class="font-semibold">Back to Scenarios</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <section class="px-4 pb-12">
+      <div class="max-w-7xl mx-auto">
+        <!-- Two Column Layout -->
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- LEFT COLUMN -->
+          <div class="space-y-6">
+            <p class="text-blue-400 text-sm font-bold tracking-widest uppercase">
+              SCENARIO 3
+            </p>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight">
+              <span class="text-blue-400" style="text-shadow: 0 0 40px rgba(59, 130, 246, 0.5);">
+                ORBITAL COMMONS
+              </span>
+            </h1>
+            <p class="text-xl md:text-2xl italic text-slate-300 leading-relaxed">
+              Policy and regulatory expertise become the key competitive advantages in a stable, utility-driven space economy.
+            </p>
+            
+            <!-- Image -->
+            <div class="bg-slate-900/50 backdrop-blur border border-blue-500/30 rounded-xl overflow-hidden aspect-[4/3] relative group mt-8">
+              <img 
+                src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800&q=80" 
+                alt="Earth from Space" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN - 2x2 Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1: Cooperative Governance -->
+            <div class="bg-blue-950/40 backdrop-blur border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300">
+              <h3 class="text-xl font-bold text-blue-300 mb-3">Cooperative Governance</h3>
+              <p class="text-slate-300 leading-relaxed">Nations agree on debris management, radio frequency allocation, and a shared orbital governance framework.</p>
+            </div>
+
+            <!-- Card 2: Tech Disappoints -->
+            <div class="bg-blue-950/40 backdrop-blur border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300">
+              <h3 class="text-xl font-bold text-blue-300 mb-3">Tech Disappoints</h3>
+              <p class="text-slate-300 leading-relaxed">Transformative propulsion and resource extraction technologies fail to deliver. Launch and operations costs remain high.</p>
+            </div>
+
+            <!-- Card 3: Space as a Utility -->
+            <div class="bg-blue-950/40 backdrop-blur border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300">
+              <h3 class="text-xl font-bold text-blue-300 mb-3">Space as a Utility</h3>
+              <p class="text-slate-300 leading-relaxed">Communications and Earth observation dominate. Incumbent operators thrive; disruptors struggle to enter.</p>
+            </div>
+
+            <!-- Card 4: Steady & Regulated -->
+            <div class="bg-blue-950/40 backdrop-blur border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300">
+              <h3 class="text-xl font-bold text-blue-300 mb-3">Steady & Regulated</h3>
+              <p class="text-slate-300 leading-relaxed">Growth is incremental and predictable. High barriers to entry protect established players from new challengers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="flex justify-center pt-16">
+          <a href="/" class="px-8 py-4 bg-blue-500 hover:bg-blue-400 text-slate-950 font-bold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 inline-block">
+            Explore Other Scenarios
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Spacer -->
+    <div class="h-20"></div>
+  </div>
+
+  <script>
+    // Generate stars
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.className = 'star absolute rounded-full bg-white';
+      star.style.width = Math.random() * 3 + 'px';
+      star.style.height = star.style.width;
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 3 + 's';
+      star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
