@@ -1,27 +1,11 @@
 import { motion } from 'framer-motion'
 import { ArrowLeft, Rocket, TrendingUp, Satellite, DollarSign } from 'lucide-react'
+import SpaceScene from './components/SpaceScene'
 
 function NewFrontier() {
   return (
     <div className="bg-slate-950 text-slate-200 min-h-screen overflow-x-hidden">
-      {/* Starfield Background */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-cyan-950/10 to-slate-950"></div>
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="star absolute rounded-full bg-white"
-            style={{
-              width: Math.random() * 3 + 'px',
-              height: Math.random() * 3 + 'px',
-              top: Math.random() * 100 + '%',
-              left: Math.random() * 100 + '%',
-              animationDelay: Math.random() * 3 + 's',
-              animationDuration: (Math.random() * 3 + 2) + 's',
-            }}
-          />
-        ))}
-      </div>
+      <SpaceScene />
 
       {/* Content */}
       <div className="relative z-10">
