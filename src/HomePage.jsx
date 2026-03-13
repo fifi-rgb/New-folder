@@ -217,12 +217,12 @@ function HomePage() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-                The Three Scenarios
+                The Four Scenarios
               </h2>
               
               <div className="max-w-7xl mx-auto">
-                {/* Three Column Layout */}
-                <div className="grid md:grid-cols-3 gap-8">
+                {/* 2x2 Matrix Layout */}
+                <div className="grid md:grid-cols-2 gap-8">
                   {/* Scenario 1: New Frontier */}
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -299,6 +299,32 @@ function HomePage() {
                       </div>
                       <div className="mt-6 text-xs text-slate-500">Click to explore →</div>
                     </a>
+                  </motion.div>
+
+                  {/* Scenario 4: Cold Orbit */}
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-slate-900/50 backdrop-blur border border-slate-600/40 rounded-xl p-8 group hover:border-slate-400/70 transition-all duration-300"
+                  >
+                    <div className="block text-center">
+                      <div className="mb-4">
+                        <div className="text-sm font-bold text-slate-300 mb-2">SCENARIO 4</div>
+                        <div className="text-3xl font-bold text-slate-200 group-hover:text-slate-100 transition-colors mb-4">
+                          Cold Orbit
+                        </div>
+                      </div>
+                      <div className="space-y-2 text-sm text-slate-400">
+                        <div className="flex items-center justify-center gap-2">
+                          <span className="text-slate-300">✓</span>
+                          <span>Fragmentation</span>
+                        </div>
+                        <div className="flex items-center justify-center gap-2">
+                          <span className="text-slate-300">✓</span>
+                          <span>Stagnation</span>
+                        </div>
+                      </div>
+                      <div className="mt-6 text-xs text-slate-500">Overview only</div>
+                    </div>
                   </motion.div>
                 </div>
               </div>
